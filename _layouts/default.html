@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        {% if page.title %}
+            {{page.title}} | {{site.title}}
+        {% elsif page.crumb %}
+            {{page.crumb}} | {{site.title}}
+        {%else%}
+            {{site.title}}
+        {%endif%}
+    </title>
+
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width">
+
+
+    <link rel="canonical" href="http://xlfe.net{{ page.url | replace:'index.html','' }}" />
+    <link rel="alternate" type="application/rss+xml" title="xlfe's blog" href="{{site.url}}/atom.xml" />
+
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    {% if site.github %}
+        <link rel="stylesheet" href="/css/site.css?sha={{ site.github.build_revision }}">
+    {% else %}
+        <link rel="stylesheet" href="/css/site.css">
+    {% endif %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.1.min.js"><\/script>')</script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/js/background.js"></script>
+
+</head>
+
+<body>
+
+    <canvas id="canvas">
+    </canvas>
+
+    <section>
+
+        {{content}}
+
+    </section>
+
+  {% if site.github %}
+    {% include analytics.html %}
+  {% endif %}
+
+</body>
+</html>
+

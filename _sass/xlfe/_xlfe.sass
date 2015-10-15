@@ -1,0 +1,359 @@
+@import variables
+
+body
+  border-top: 7px solid $secondary-color
+
+header
+  height: $nav-height
+  margin-bottom: $nav-height / 4
+  display: block
+  width: 100%
+  +clearfix
+  font-family: $sans-serif-main
+  font-weight: 300
+  a.logo
+    float: left
+    max-height: $nav-height
+    img
+      max-height: $nav-height - 20
+      margin-top: 10px
+      margin-bottom: 10px
+  nav
+    float: right
+    text-align: center
+    ul li
+      display: inline
+      text-decoration: none
+      line-height: $nav-height
+      font-size: .9em
+      a
+        color: $secondary-color
+        &:hover
+          color: darken($secondary-color, 15)
+      \:after
+        content: " \00b7"
+        font-weight: bold
+    li.no-bullet :after
+      content: none
+
+section
+  +outer-container
+  width: 720px
+  margin: 10px auto
+  padding-top: 10px
+  +media(min-width 680px max-width 760px)
+    width: 600px
+
+  +media(min-width 500px max-width 680px)
+    width: 520px
+
+  +media(max-width 500px)
+    width: 300px
+
+article
+  +clearfix
+  text-align: left
+  h1
+    font-family: $sans-serif-main
+    font-size: 1.2em
+    color: $secondary-color
+    margin-bottom: .4em
+    +media($medium-screen)
+      font-size: 1.7em
+  h1.title
+    font-size: 1.4em
+    +media($medium-screen)
+      font-size: 1.9em
+  h2
+    font-family: $sans-serif-main
+    font-size: 1.2em
+    font-weight: 400
+    line-height: 1.4em
+    margin-bottom: .3em
+    +media($medium-screen)
+      font-size: 1.4em
+  h3
+    font-family: $sans-serif-main
+    font-size: 1.2em
+    font-weight: 400
+    line-height: 1.3em
+    margin-bottom: .3em
+  p.subtitle
+    color: transparentize($base-font-color, 0.6)
+    font-family: $sans-serif-main
+    font-size: .9em
+    margin-bottom: .5em
+    margin-top: .3em
+    .date
+      float: right
+  p
+    font-family: $sans-serif-main
+    line-height: 1.4em
+    font-size: 1.05em
+    font-weight: 300
+    margin-bottom: 1em
+    span
+      font-family: $sans-serif-main
+      font-size: 0.9em
+  p.author
+    font-family: $sans-serif-main
+  ul
+    margin: 1em 0
+    list-style: disc
+  pre code
+    border: none
+    font-size: 100%
+  code
+    border: 1px solid #ddd
+    font-size: 85%
+    padding: 0 .3em
+  hr
+    width: 40%
+    margin-left: auto
+    margin-right: auto
+  hr.fin
+    width: 100%
+    margin-left: 0
+    margin-bottom: 15px
+    margin-top: 60px
+  blockquote
+    font-size: 1.2em
+    border-color: $secondary-color
+    font-style: italic
+
+footer
+  //+media(max-width 760px)
+  //  display: none
+
+  +outer-container
+  padding-bottom: 30px
+  font-size: .9em
+  margin-top: 5px
+  #bio
+    +span-columns(6)
+    display: table
+  aside
+    +span-columns(6)
+    text-align: right
+    p
+      margin-bottom: 1em
+  #bio-text
+    p
+      margin-bottom: 0.5em
+  #bio-social
+    margin-top: -12px
+    a
+      color: $accent-color
+      font-size: 1.8em
+    #social-links
+      display: inline-block
+      position: relative
+      top: 4px
+      left: 4px
+  h3
+    font-size: 1em
+
+#post
+  img
+    margin: 0 auto
+    display: block
+
+#fine-print
+  text-align: center
+  font-size: 11px
+  color: #666
+
+#series
+  font-family: $sans-serif-main
+  h3
+    color: $secondary-color
+    text-align: center
+  p
+    color: transparentize($base-font-color, 0.6)
+    text-align: center
+    font-size: 0.9em
+    width: 75%
+    margin: 0 auto 0.75em auto
+  ul
+    overflow: hidden
+    padding-bottom: 40px
+  li
+    text-align: center
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    font-weight: 300
+    color: transparentize($base-font-color, 0.8)
+    //for ellipsis color
+    +media($medium-screen)
+      width: 48%
+      margin-left: 1%
+      margin-right: 1%
+      float: left
+      display: inline
+  .favorite
+    font-weight: 700
+
+
+
+.axis path, .axis line
+  fill: none
+  stroke: #000
+  shape-rendering: crispEdges
+
+.line
+  fill: none
+  stroke: steelblue
+  stroke-width: 1.0px
+
+div.chart
+  margin-top: -1em
+
+g.tick > text
+  font: 11px Arial,sans-serif
+
+
+img.post-img
+  width: 100%
+
+.bar
+  fill: #036
+
+.hidden-label
+  display: none
+
+.bar-label, .hidden-label
+  font: 12px sans-serif
+  color: #454
+
+.bar:hover
+  fill: #a00
+
+canvas
+  position: fixed
+  top: 0
+  left: 0
+  opacity: 0.15
+  pointer-events: none
+
+
+
+
+
+
+.highlight
+  .hll
+    background-color: #ffffcc
+  .c
+    color: #999988
+    font-style: italic
+  .err
+    color: #a61717
+    background-color: #e3d2d2
+  .k, .o
+    color: #000000
+    font-weight: bold
+  .cm
+    color: #999988
+    font-style: italic
+  .cp
+    color: #999999
+    font-weight: bold
+    font-style: italic
+  .c1
+    color: #999988
+    font-style: italic
+  .cs
+    color: #999999
+    font-weight: bold
+    font-style: italic
+  .gd
+    color: #000000
+    background-color: #ffdddd
+  .ge
+    color: #000000
+    font-style: italic
+  .gr
+    color: #aa0000
+  .gh
+    color: #999999
+  .gi
+    color: #000000
+    background-color: #ddffdd
+  .go
+    color: #888888
+  .gp
+    color: #555555
+  .gs
+    font-weight: bold
+  .gu
+    color: #aaaaaa
+  .gt
+    color: #aa0000
+  .kc, .kd, .kn, .kp, .kr
+    color: #000000
+    font-weight: bold
+  .kt
+    color: #445588
+    font-weight: bold
+  .m
+    color: #009999
+  .s
+    color: #d01040
+  .na
+    color: #008080
+  .nb
+    color: #0086B3
+  .nc
+    color: #445588
+    font-weight: bold
+  .no
+    color: #008080
+  .nd
+    color: #3c5d5d
+    font-weight: bold
+  .ni
+    color: #800080
+  .ne, .nf, .nl
+    color: #990000
+    font-weight: bold
+  .nn
+    color: #555555
+  .nt
+    color: #000080
+  .nv
+    color: #008080
+  .ow
+    color: #000000
+    font-weight: bold
+  .w
+    color: #bbbbbb
+  .mf, .mh, .mi, .mo
+    color: #009999
+  .sb, .sc, .sd, .s2, .se, .sh, .si, .sx
+    color: #d01040
+  .sr
+    color: #009926
+  .s1
+    color: #d01040
+  .ss
+    color: #990073
+  .bp
+    color: #999999
+  .vc, .vg, .vi
+    color: #008080
+  .il
+    color: #009999
+
+div.highlight > pre
+  max-height: 400px
+  overflow-x: scroll
+  background-color: #fff
+
+/*display: inline;*/
+/*border: none;*/
+
+div.highlight > pre > code
+  word-wrap: normal !important
+  white-space: pre !important
+

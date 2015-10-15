@@ -1,0 +1,23 @@
+# Syntax highlighting
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+title:               xlfe.net
+tagline:             xlfe's website
+url:                 http://xlfe.net
+baseurl:             /
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+title : xlfe
+tagline: xlfe's homepage
+production_url : http://xlfe.net
+
+

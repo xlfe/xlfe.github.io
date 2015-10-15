@@ -1,0 +1,16 @@
+
+- name: Data Science
+  desc: |
+    Observations and musings on data science and all things related
+  tag_name: data science
+
+- name: Projects
+  desc: |
+    Various projects (not all are current)
+  tag_name: project
+
+- name: Data
+  desc: |
+    Interesting data that I've collated or stumbled upon
+  tag_name: data
+

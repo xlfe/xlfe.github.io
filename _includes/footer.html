@@ -1,0 +1,34 @@
+<footer>
+  <div id="bio">
+    <div id="bio-text">
+      <p>
+        Hello there - I'm <b>Felix Barbalet</b>
+      </p>
+      <p>
+        You've stumbled upon my personal website.
+      </p>
+
+      <div id="bio-social">
+        {% include social.html %}
+      </div>
+    </div>
+  </div>
+
+  {% unless page.skip_related %}
+  <aside>
+    <h3>Further reading</h3>
+    <ul class="posts">
+      {% if page.tags %}
+        {% assign sn = page.tags | first %}
+        {% for post in site.tags[sn] limit:3 %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      {% else %}
+        {% for post in site.related_posts limit:3 %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </aside>
+  {% endunless %}
+</footer>

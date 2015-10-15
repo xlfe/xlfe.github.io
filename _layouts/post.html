@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<article>
+    <h1 class="title">
+        {{ page.title }}
+    </h1>
+
+    <p class="subtitle">
+        {% if page.subtitle %}
+        <span>{{ page.subtitle }}</span>
+        {% endif %}
+
+      <span class="date">
+        {{ page.date | date: "%B %d, %Y" }}
+      </span>
+    </p>
+
+    <div id="post">
+        {{ content }}
+    </div>
+
+    {% unless page.skip_footer %}
+        <hr class="fin"/>
+    {% endunless %}
+</article>
+
+{% unless page.skip_footer %}
+{% include footer.html %}
+{% endunless %}
+
+
