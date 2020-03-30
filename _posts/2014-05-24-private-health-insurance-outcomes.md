@@ -8,13 +8,11 @@ tags:
 ---
 
 This is the final post in a series on private health insurance data; [Part 0]({% post_url  2013-09-23-private-health-insurance %})
-(23 Sept. 2013), [Part 1]({% post_url 2013-11-21-private-health-insurance-opacity %}) (21 Nov. 2013) and [Part 2]
-({% post_url 2014-02-24-private-health-insurance-obfuscation %}) (24 Feb. 2014).
+(23 Sept. 2013), [Part 1]({% post_url 2013-11-21-private-health-insurance-opacity %}) (21 Nov. 2013) and [Part 2]({% post_url 2014-02-24-private-health-insurance-obfuscation %}) (24 Feb. 2014).
 
 ### FOI outcomes
 
-Following the Private Health Insurance Ombudsman's (PHIO) attempt to [limit]
-({% post_url 2014-02-24-private-health-insurance-obfuscation %}) the use of the data publicly available on their
+Following the Private Health Insurance Ombudsman's (PHIO) attempt to [limit]({% post_url 2014-02-24-private-health-insurance-obfuscation %}) the use of the data publicly available on their
 website, I lodged an appeal with the Australian Office of the Information Commissioner.
 
 I received their [response](/assets/FOI-PHIO-Docs/FOI-OAIC-Response.pdf) a few days ago - they advised that they had
